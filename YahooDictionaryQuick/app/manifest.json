@@ -1,0 +1,33 @@
+{
+    "name": "Yahoo Dictionary Search",
+    "version": "1.2",
+    "manifest_version": 2,
+    "description": "This extension just for quicky search Yahoo Dictionary with selected text.",
+    "permissions": [
+        "tabs",
+        "<all_urls>",
+        "contextMenus"
+    ],
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Selected Text then Click here!"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js": [ "selection.js" ],
+            "run_at": "document_start",
+            "all_frames": true
+        }
+    ],
+    //for contextMenu
+    "background": {
+        "persistent": false,
+        "scripts": [ "background.js" ]
+    },
+    "icons": { "16": "img/icon.png",
+           "48": "img/icon.png",
+          "128": "img/icon.png" }
+
+}
