@@ -1,6 +1,6 @@
 {
     "name": "Yahoo Dictionary Search",
-    "version": "1.2",
+    "version": "1.3",
     "manifest_version": 2,
     "description": "This extension just for quicky search Yahoo Dictionary with selected text.",
     "permissions": [
@@ -21,7 +21,6 @@
             "all_frames": true
         }
     ],
-    //for contextMenu
     "background": {
         "persistent": false,
         "scripts": [ "background.js" ]
