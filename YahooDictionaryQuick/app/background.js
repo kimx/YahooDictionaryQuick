@@ -1,7 +1,7 @@
 ﻿// Set up context menu at install time.
 chrome.runtime.onInstalled.addListener(function () {
     var context = "selection";
-    var title = "Yahoo Dictionary for Selected Text";
+    var title = "English Dictionary for Selected Text";
     var id = chrome.contextMenus.create({
         "title": title, "contexts": [context],
         "id": "context" + context
